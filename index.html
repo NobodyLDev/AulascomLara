@@ -28,20 +28,31 @@
   <div class="nav-inner">
     <span class="nav-mark">Aula<strong>CL</strong>ara</span>
 
-    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav id="nav-menu">
+    <nav class="nav-desktop">
       <a href="#quem-sou-eu" class="nav-link" data-section="quem-sou-eu">Quem sou eu?</a>
       <a href="#breve-resumo" class="nav-link" data-section="breve-resumo">Breve resumo</a>
       <a href="#servicos" class="nav-link" data-section="servicos">Serviços</a>
       <a href="#trabalhos" class="nav-link" data-section="trabalhos">Trabalhos</a>
-      <a href="#contato" class="nav-cta nav-cta--mobile">Contatos</a>
     </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span></span><span></span><span></span>
+    </button>
+
     <a href="#contato" class="nav-cta nav-cta--desktop">Contatos</a>
   </div>
 </header>
+
+<!-- Menu mobile: fica FORA do header de propósito, para não herdar o
+     backdrop-filter/stacking context dele e garantir cobertura total da tela -->
+<nav id="mobile-menu" class="mobile-menu">
+  <a href="#quem-sou-eu" class="nav-link" data-section="quem-sou-eu">Quem sou eu?</a>
+  <a href="#breve-resumo" class="nav-link" data-section="breve-resumo">Breve resumo</a>
+  <a href="#servicos" class="nav-link" data-section="servicos">Serviços</a>
+  <a href="#trabalhos" class="nav-link" data-section="trabalhos">Trabalhos</a>
+  <a href="#contato" class="nav-cta nav-cta--mobile">Contatos</a>
+</nav>
+
 
 <main>
 

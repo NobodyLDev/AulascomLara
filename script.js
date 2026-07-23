@@ -39,7 +39,7 @@ navLinks.forEach(link => {
 
 // Menu mobile (hambúrguer)
 const navToggle = document.getElementById('nav-toggle');
-const navMenu = document.getElementById('nav-menu');
+const navMenu = document.getElementById('mobile-menu');
 
 if (navToggle && navMenu) {
   const closeMenu = () => {
