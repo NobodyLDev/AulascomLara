@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
 
@@ -24,14 +25,21 @@
 <header class="nav" id="nav">
   <div class="nav-inner">
     <span class="nav-mark">Aula<strong>C</strong></span>
-    <nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav id="nav-menu">
       <a href="#quem-sou-eu" class="nav-link" data-section="quem-sou-eu">Quem sou eu?</a>
       <a href="#breve-resumo" class="nav-link" data-section="breve-resumo">Breve resumo</a>
       <a href="#servicos" class="nav-link" data-section="servicos">Serviços</a>
       <a href="#trabalhos" class="nav-link" data-section="trabalhos">Trabalhos</a>
+      <a href="#contato" class="nav-cta nav-cta--mobile">Contato</a>
     </nav>
-    <a href="#contato" class="nav-cta">Contato</a>
+    <a href="#contato" class="nav-cta nav-cta--desktop">Contato</a>
   </div>
+  <div class="nav-overlay" id="nav-overlay"></div>
 </header>
 
 <main>
@@ -55,7 +63,7 @@
       </div>
       <div class="hero-profile">
         <div class="hero-photo">
-          <div class="ph-content"><img src="image.png" alt="Lara Noronha Sanches"></div><!-- troque esta div por: <img src="sua-foto.jpg" alt="Lara Noronha Sanches"> -->
+          <div class="ph-content"><img src="./images/foto-Lara.jpeg" alt="Lara Noronha Sanches"></div><!-- troque esta div por: <img src="sua-foto.jpg" alt="Lara Noronha Sanches"> -->
         </div>
         <h2 class="hero-name">Lara Noronha<br>Sanches</h2>
         <p class="hero-role">Pedagoga</p>
@@ -88,7 +96,7 @@
       </div>
       <div class="col-photo">
         <div class="photo-frame photo-frame--pink">
-          <div class="ph-content"><img src="image.png" alt="Lara Noronha Sanches"></div><!-- troque esta div por: <img src="sua-foto.jpg" alt="Lara Noronha Sanches"> -->
+          <div class="ph-content"><img src="./images/foto-Lara.jpeg" alt="Lara Noronha Sanches"></div><!-- troque esta div por: <img src="sua-foto.jpg" alt="Lara Noronha Sanches"> -->
         </div>
       </div>
     </div>
@@ -210,9 +218,15 @@
       </div>
       <div class="col-collage">
         <div class="collage-frame collage-frame--pink" aria-hidden="true"></div>
-        <div class="collage-photo collage-photo--1"><div class="ph-content"><img src="fotobrincando.jpeg" alt="Trabalho 1"></div><!-- troque esta div por: <img src="trabalho-1.jpg" alt=""> --></div>
-        <div class="collage-photo collage-photo--2"><div class="ph-content"><img src="excursão1.png" alt="Trabalho 2"></div><!-- troque esta div por: <img src="trabalho-2.jpg" alt=""> --></div>
-        <div class="collage-photo collage-photo--3"><div class="ph-content"><img src="excursão2.png" alt="Trabalho 3"></div><!-- troque esta div por: <img src="trabalho-3.jpg" alt=""> --></div>
+        <div class="collage-photo collage-photo--1">
+          <div class="ph-content"><img src="./images/excursão.jpeg" alt="fotos da excursão"></div><!-- troque esta div por: <img src="trabalho-1.jpg" alt=""> -->
+        </div>
+        <div class="collage-photo collage-photo--2">
+          <div class="ph-content"><img src="./images/quadra.jpeg" alt="Fotos da quadra"></div><!-- troque esta div por: <img src="trabalho-1.jpg" alt=""> -->
+        </div>
+        <div class="collage-photo collage-photo--3">
+          <div class="ph-content"><img src="./images/atividades.jpeg" alt="Fotos das atividades"></div><!-- troque esta div por: <img src="trabalho-1.jpg" alt=""> -->
+        </div>
       </div>
     </div>
   </section>
@@ -233,8 +247,8 @@
         <p class="display-md">Vamos <strong>juntos</strong>?</p>
 
         <div class="contact-card">
-          <a class="contact-row" href="tel:+5511940625354">
-            <span class="contact-icon">☎</span> (11) 94062-5354
+          <a class="contact-row" href="https://wa.me/5511940625354?text=Ol%C3%A1!%20Gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20das%20aulas%20de%20refor%C3%A7o!%20">
+            <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span> (11) 94062-5354
           </a>
           <a class="contact-row" href="mailto:noronhasanchesl@gmail.com">
             <span class="contact-icon">✉</span> noronhasanchesl@gmail.com
@@ -247,7 +261,7 @@
 
       <div class="col-photo">
         <div class="photo-frame photo-frame--pink photo-frame--footer">
-          <div class="ph-content"><img src="image.png" alt="Lara Noronha Sanches"></div><!-- troque esta div por: <img src="sua-foto.jpg" alt="Lara Noronha Sanches"> -->
+          <div class="ph-content"><img src="./images/foto-Lara.jpeg" alt="Lara Noronha Sanches"></div><!-- troque esta div por: <img src="sua-foto.jpg" alt="Lara Noronha Sanches"> -->
         </div>
       </div>
     </div>
