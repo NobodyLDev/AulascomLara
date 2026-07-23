@@ -189,20 +189,6 @@ a{ color:inherit; text-decoration:none; }
 .nav-toggle.is-open span:nth-child(2){ opacity:0; }
 .nav-toggle.is-open span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
 
-.nav-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(20,16,26,0.4);
-  z-index:54;
-  opacity:0;
-  pointer-events:none;
-  transition:opacity 0.3s ease;
-}
-.nav-overlay.is-open{
-  opacity:1;
-  pointer-events:auto;
-}
-
 /* ============================================================
    PILLS
    ============================================================ */
@@ -569,22 +555,37 @@ a{ color:inherit; text-decoration:none; }
 
   .nav-inner nav{
     position:fixed;
-    top:0;
-    right:0;
-    height:100vh;
-    width:min(78vw, 320px);
+    inset:0;
+    width:100%;
+    height:100dvh;
     background:var(--cream);
     flex-direction:column;
     align-items:flex-start;
+    justify-content:center;
     gap:0.4rem;
-    padding:6rem 2rem 2rem;
+    padding:2.5rem 9vw;
     transform:translateX(100%);
     transition:transform 0.3s ease;
-    box-shadow:-8px 0 30px rgba(0,0,0,0.12);
     z-index:55;
+    overflow-y:auto;
   }
   .nav-inner nav.is-open{ transform:translateX(0); }
-  .nav-link{ font-size:1rem; padding:0.5rem 0; width:100%; }
+
+  .nav-link{
+    font-size:1.6rem;
+    font-weight:600;
+    color:var(--ink);
+    padding:0.65rem 0;
+    width:100%;
+    border-bottom:1px solid var(--line);
+  }
+  .nav-link.is-active{ color:var(--violet-deep); }
+
+  .nav-cta--mobile{
+    margin-top:1.6rem;
+    font-size:1.05rem;
+    padding:0.9rem 2rem;
+  }
 
   body.menu-open{ overflow:hidden; }
 

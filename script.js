@@ -40,7 +40,6 @@ navLinks.forEach(link => {
 // Menu mobile (hambúrguer)
 const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
-const navOverlay = document.getElementById('nav-overlay');
 
 if (navToggle && navMenu) {
   const closeMenu = () => {
@@ -48,7 +47,6 @@ if (navToggle && navMenu) {
     navToggle.classList.remove('is-open');
     navToggle.setAttribute('aria-expanded', 'false');
     document.body.classList.remove('menu-open');
-    if (navOverlay) navOverlay.classList.remove('is-open');
   };
 
   const openMenu = () => {
@@ -56,7 +54,6 @@ if (navToggle && navMenu) {
     navToggle.classList.add('is-open');
     navToggle.setAttribute('aria-expanded', 'true');
     document.body.classList.add('menu-open');
-    if (navOverlay) navOverlay.classList.add('is-open');
   };
 
   navToggle.addEventListener('click', () => {
@@ -68,9 +65,6 @@ if (navToggle && navMenu) {
   navMenu.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
-
-  // Fecha o menu ao clicar no fundo escurecido
-  if (navOverlay) navOverlay.addEventListener('click', closeMenu);
 
   // Fecha o menu com a tecla Esc
   document.addEventListener('keydown', (e) => {
